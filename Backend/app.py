@@ -7,8 +7,8 @@ app = Flask(__name__)
 def check_grammar():
     data = request.json
     text = data.get("text", "")
-    cleaned_text = preprocess_text(text)  # Apply NLP preprocessing
-    corrected_text = correct_grammar(cleaned_text)  # Correct grammar using Hugging Face model
+    cleaned_text = preprocess_text(text)  
+    corrected_text = correct_grammar(cleaned_text)  
     return jsonify({"corrected_text": corrected_text})
 
 if __name__ == '__main__':
