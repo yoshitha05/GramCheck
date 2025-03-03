@@ -1,0 +1,10 @@
+> How They Work Together
+1. User types text → text state updates.
+2. User clicks "Check Grammar" → checkGrammar() runs.
+3. React sends text to Flask (POST /check_grammar).
+4. Flask processes text using LanguageTool and returns corrected text.
+5. React updates correctedText and displays the result.
+
+
+App.js:
+This component will contain the text input field, a button to check grammar, and an area to display corrected text.
